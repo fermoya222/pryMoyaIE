@@ -35,16 +35,16 @@
             // temporizador
             // 
             this.temporizador.Enabled = true;
-            this.temporizador.Interval = 3000;
+            this.temporizador.Interval = 1000;
             this.temporizador.Tick += new System.EventHandler(this.temporizador_Tick);
             // 
             // frmLogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::pryMoyaIE.Properties.Resources.Software;
+            this.BackgroundImage = global::pryMoyaIE.Properties.Resources.Social;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(554, 360);
+            this.ClientSize = new System.Drawing.Size(646, 397);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogo";
