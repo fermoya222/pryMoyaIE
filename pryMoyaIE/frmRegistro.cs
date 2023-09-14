@@ -30,5 +30,10 @@ namespace pryMoyaIE
             frmMain v = new frmMain();
             v.ShowDialog();
         }
+
+        private void frmRegistro_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

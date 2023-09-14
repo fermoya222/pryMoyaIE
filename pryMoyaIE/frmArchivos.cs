@@ -15,8 +15,10 @@ namespace pryMoyaIE
 {
     public partial class frmArchivos : Form
     {
+        
         public frmArchivos()
         {
+            //PopulateDirectory();
             InitializeComponent();
            // Establece la ruta de la carpeta raíz que deseas explorar. (esta en bin/debug que es el lugar por defecto q levanta el proyecto)
            String rootFolderPath   = "Proveedores";
@@ -83,6 +85,11 @@ namespace pryMoyaIE
                     }
                 }
             }
+        }
+
+        private void frmArchivos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

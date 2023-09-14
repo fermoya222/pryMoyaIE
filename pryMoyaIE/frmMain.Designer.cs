@@ -99,8 +99,9 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.archivoToolStripMenuItem.Text = "Archivo";
+            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -145,7 +146,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Gestión de Ventas de Servicio";
+            this.Text = "Sistema de Gestión de Ventas de Seguro";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

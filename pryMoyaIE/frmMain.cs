@@ -35,6 +35,9 @@ namespace pryMoyaIE
             StreamWriter sw = new StreamWriter("logGeneral", false);
             sw.WriteLine( " - Fecha: " + DateTime.Now);
             sw.Close();
+
+            frmRegistroProveedor v = new frmRegistroProveedor();
+            v.ShowDialog();
         }
         
        
@@ -49,6 +52,12 @@ namespace pryMoyaIE
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArchivos v = new frmArchivos();
+            v.ShowDialog();
         }
     }
 }

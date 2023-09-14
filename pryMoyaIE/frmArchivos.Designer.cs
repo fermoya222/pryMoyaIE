@@ -34,7 +34,7 @@
             // 
             // treeViewArchivos
             // 
-            this.treeViewArchivos.Location = new System.Drawing.Point(34, 27);
+            this.treeViewArchivos.Location = new System.Drawing.Point(81, 12);
             this.treeViewArchivos.Name = "treeViewArchivos";
             this.treeViewArchivos.Size = new System.Drawing.Size(434, 168);
             this.treeViewArchivos.TabIndex = 0;
@@ -42,9 +42,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(34, 202);
+            this.richTextBox1.Location = new System.Drawing.Point(81, 186);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(741, 206);
+            this.richTextBox1.Size = new System.Drawing.Size(434, 149);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
@@ -52,11 +52,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(630, 358);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.treeViewArchivos);
             this.Name = "frmArchivos";
-            this.Text = "frmArchivos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Informacion de Archivos";
+            this.Load += new System.EventHandler(this.frmArchivos_Load);
             this.ResumeLayout(false);
 
         }
