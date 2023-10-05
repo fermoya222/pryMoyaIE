@@ -14,7 +14,10 @@ namespace pryMoyaIE
         //LEER ARCHIVO CSV
         public void CargarInfo(DataGridView grilla, ComboBox cmbJuzg, ComboBox cmbJuri, ComboBox cmbLiqui)
         {
-            string archivoProveedor = "Listado de aseguradores.csv";
+
+            DirectoryInfo info = new DirectoryInfo(@"..\..");
+
+            string archivoProveedor = info.FullName + "\\Listado de aseguradores.csv";
 
             try
             {

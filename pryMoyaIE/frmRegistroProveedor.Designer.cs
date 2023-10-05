@@ -222,6 +222,7 @@
             this.LIQUIDADOR});
             this.dgvProveedores.Location = new System.Drawing.Point(12, 47);
             this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedores.Size = new System.Drawing.Size(569, 438);
             this.dgvProveedores.TabIndex = 19;
             // 

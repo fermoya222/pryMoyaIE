@@ -30,7 +30,7 @@ namespace pryMoyaIE
 
         private void PopulateTreeView(System.Windows.Forms.TreeView treeView, string folderPath)
         {
-            DirectoryInfo rootDirectory = new DirectoryInfo(folderPath);
+            DirectoryInfo rootDirectory = new DirectoryInfo(@"..\..\Proveedores");
 
             // Limpia el TreeView antes de volver a llenarlo.
             treeView.Nodes.Clear();
