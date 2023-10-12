@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAccesoDatos.cs" />
     <Compile Include="clsRegistroProveedores.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="frmArchivos.cs">
@@ -54,6 +55,12 @@
     </Compile>
     <Compile Include="frmArchivos.Designer.cs">
       <DependentUpon>frmArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioSesion.Designer.cs">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogo.cs">
       <SubType>Form</SubType>
@@ -83,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmArchivos.resx">
       <DependentUpon>frmArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogo.resx">
       <DependentUpon>frmLogo.cs</DependentUpon>

@@ -30,11 +30,10 @@
         {
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -59,30 +58,30 @@
             this.lblContraseña.TabIndex = 1;
             this.lblContraseña.Text = "Contraseña";
             // 
-            // txtUsuario
+            // textBox1
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(292, 147);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 2;
+            this.textBox1.Location = new System.Drawing.Point(292, 147);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
             // 
-            // txtPassword
+            // textBox2
             // 
-            this.txtPassword.Location = new System.Drawing.Point(292, 193);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtPassword.TabIndex = 3;
+            this.textBox2.Location = new System.Drawing.Point(292, 193);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 3;
             // 
-            // btnCancelar
+            // btnIniciar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(414, 259);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnIniciar_Click);
+            this.btnIniciar.Location = new System.Drawing.Point(257, 266);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(100, 23);
+            this.btnIniciar.TabIndex = 4;
+            this.btnIniciar.Text = "Iniciar sesion";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // lblTitulo
             // 
@@ -95,28 +94,17 @@
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "RED BROKER";
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Location = new System.Drawing.Point(267, 259);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(100, 23);
-            this.btnRegistrar.TabIndex = 6;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // frmRegistro
             // 
-            this.AcceptButton = this.btnCancelar;
+            this.AcceptButton = this.btnIniciar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(630, 358);
-            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.lblUsuario);
             this.Name = "frmRegistro";
@@ -132,10 +120,9 @@
 
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnRegistrar;
     }
 }

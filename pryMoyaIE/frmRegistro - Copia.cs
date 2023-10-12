@@ -20,27 +20,20 @@ namespace pryMoyaIE
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            ////registro
-            //StreamWriter sw = new StreamWriter("logInicio", false);
-            //sw.WriteLine(textBox1.Text + " - Fecha: " + DateTime.Now);
-            //sw.Close();
+            //registro
+            StreamWriter sw = new StreamWriter("logInicio", false);
+            sw.WriteLine(textBox1.Text + " - Fecha: " + DateTime.Now);
+            sw.Close();
 
 
-            //this.Hide();
-            //frmMain v = new frmMain();
-            //v.ShowDialog();
+            this.Hide();
+            frmMain v = new frmMain();
+            v.ShowDialog();
         }
 
         private void frmRegistro_Load(object sender, EventArgs e)
         {
             
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            clsAccesoDatos objDatos = new clsAccesoDatos();
-
-            objDatos.RegistrarUsuario(txtUsuario.Text, txtPassword.Text);
         }
     }
 }
