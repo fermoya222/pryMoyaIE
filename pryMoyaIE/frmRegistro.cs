@@ -17,30 +17,33 @@ namespace pryMoyaIE
         {
             InitializeComponent();
         }
+        
 
-        private void btnIniciar_Click(object sender, EventArgs e)
+        public void btnIniciar_Click(object sender, EventArgs e)
         {
-            ////registro
-            //StreamWriter sw = new StreamWriter("logInicio", false);
-            //sw.WriteLine(textBox1.Text + " - Fecha: " + DateTime.Now);
-            //sw.Close();
+            string usuario = txtUsuario.Text;
+            string contraseña = txtPassword.Text;
+            // Se obtienen el nombre de usuario y la contraseña de los campos de entrada en el formulario.
 
+            clsUsuario objUsuario = clsUsuario.Login(usuario, contraseña);
+            // Se crea una instancia de la clase clsLogs y se llama al método Login para intentar autenticar al usuario.
 
-            //this.Hide();
-            //frmMain v = new frmMain();
-            //v.ShowDialog();
-        }
+           
+            
+        }   
 
         private void frmRegistro_Load(object sender, EventArgs e)
         {
             
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            clsAccesoDatos objDatos = new clsAccesoDatos();
+       
 
-            objDatos.RegistrarUsuario(txtUsuario.Text, txtPassword.Text);
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            frmNuevoUsuario Nuevo = new frmNuevoUsuario();
+            Nuevo.ShowDialog();
+            this.Hide();
         }
     }
 }

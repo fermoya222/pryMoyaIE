@@ -47,7 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsAccesoDatos.cs" />
     <Compile Include="clsRegistroProveedores.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="frmArchivos.cs">
@@ -55,12 +54,6 @@
     </Compile>
     <Compile Include="frmArchivos.Designer.cs">
       <DependentUpon>frmArchivos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmInicioSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInicioSesion.Designer.cs">
-      <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogo.cs">
       <SubType>Form</SubType>
@@ -73,6 +66,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoUsuario.Designer.cs">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistro.cs">
       <SubType>Form</SubType>
@@ -91,14 +90,14 @@
     <EmbeddedResource Include="frmArchivos.resx">
       <DependentUpon>frmArchivos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInicioSesion.resx">
-      <DependentUpon>frmInicioSesion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogo.resx">
       <DependentUpon>frmLogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoUsuario.resx">
+      <DependentUpon>frmNuevoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
