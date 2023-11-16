@@ -71,6 +71,7 @@
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
             this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedorToolStripMenuItem.Text = "Proveedor";
+            this.proveedorToolStripMenuItem.Click += new System.EventHandler(this.proveedorToolStripMenuItem_Click);
             // 
             // registroDeProveedoresToolStripMenuItem
             // 
@@ -93,13 +94,13 @@
             this.provedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem});
             this.provedoresToolStripMenuItem.Name = "provedoresToolStripMenuItem";
-            this.provedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.provedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.archivoToolStripMenuItem.Text = "Archivo";
             this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 

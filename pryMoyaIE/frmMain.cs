@@ -13,7 +13,7 @@ namespace pryMoyaIE
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        public frmMain(clsUsuario objUsuario)
         {
             InitializeComponent();
         }
@@ -58,6 +58,11 @@ namespace pryMoyaIE
         {
             frmArchivos v = new frmArchivos();
             v.ShowDialog();
+        }
+
+        private void proveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

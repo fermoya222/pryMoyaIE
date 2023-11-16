@@ -119,6 +119,7 @@
             this.btnVolver.TabIndex = 16;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            
             // 
             // pbFirma
             // 

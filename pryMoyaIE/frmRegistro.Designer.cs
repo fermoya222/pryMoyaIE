@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -35,6 +36,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -65,6 +67,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(120, 20);
             this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtPassword
             // 
@@ -73,6 +76,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(120, 20);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblTitulo
             // 
@@ -105,6 +109,10 @@
             this.btnRegistrarse.UseVisualStyleBackColor = true;
             this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
+            // Timer
+            // 
+            this.Timer.Interval = 1000;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,5 +144,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnRegistrarse;
+        private System.Windows.Forms.Timer Timer;
     }
 }
