@@ -13,7 +13,12 @@ namespace pryMoyaIE
 {
     public partial class frmMain : Form
     {
-        public frmMain(clsUsuario objUsuario)
+        public frmMain()
+        {
+            InitializeComponent();
+        }
+
+        public frmMain(object objUsuario)
         {
             InitializeComponent();
         }

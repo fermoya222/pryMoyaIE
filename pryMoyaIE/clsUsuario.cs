@@ -19,7 +19,7 @@ namespace pryMoyaIE
         OleDbDataReader Lector;
 
         public string estadoConexion;
-        public int Id { get; set; }
+        public Int32 Id { get; set; }
         public string Usuario { get; set; }
         public string Contraseña { get; set; }
         public string NombreUsuario { get; set; }
@@ -87,16 +87,16 @@ namespace pryMoyaIE
                     }
                 }
 
-                string sqlInsertarUsuario = "INSERT INTO Usuario(Usuario, Contraseña, Rol) VALUES (?, ?, ?)";
+                string sqlInsertarUsuario = "INSERT INTO Usuario(Usuario, Contraseña) VALUES (@parametro1, @parametro2)";
                 // Se define una nueva consulta SQL para insertar un nuevo usuario en la base de datos.
 
                 using (OleDbCommand comandoUsuario = new OleDbCommand(sqlInsertarUsuario, conexion))
                 {
                     // Se crea otro objeto OleDbCommand para ejecutar la consulta SQL de inserción.
 
-                    comandoUsuario.Parameters.AddWithValue("parametro1", Usuario);
-                    comandoUsuario.Parameters.AddWithValue("parametro2", Contrasena);
-                    comandoUsuario.Parameters.AddWithValue("parametro3", Rol);
+                    comandoUsuario.Parameters.AddWithValue("@parametro1", Usuario);
+                    comandoUsuario.Parameters.AddWithValue("@parametro2", Contrasena);
+                    comandoUsuario.Parameters.AddWithValue("@parametro3", Rol);
                     // Se agregan los parámetros Usuario, Contrasena y Rol a la consulta SQL.
 
                     comandoUsuario.ExecuteNonQuery();
@@ -121,17 +121,24 @@ namespace pryMoyaIE
                 conexion.Open();
                 // Se abre la conexión.
 
-                string sql = "SELECT Id, Usuario, Contraseña, Rol FROM Usuario WHERE Usuario = ? AND Contraseña = ?";
-                // Se define una consulta SQL para buscar un usuario por nombre de usuario y contraseña.
-
-                using (OleDbCommand comando = new OleDbCommand(sql, conexion))
+                
+                using (OleDbCommand comando = new OleDbCommand())
                 {
                     // Se crea un objeto OleDbCommand para ejecutar la consulta SQL.
 
                     try
                     {
+                        string sql = "SELECT * FROM Usuario WHERE Usuario = @p1 AND Contraseña = @p2";
+                        // Se define una consulta SQL para buscar un usuario por nombre de usuario y contraseña.
+
+                        comando.Connection = conexion;
+                        comando.CommandType = System.Data.CommandType.Text;
+                        comando.CommandText = sql;
+
                         comando.Parameters.AddWithValue("@p1", usuario);
                         comando.Parameters.AddWithValue("@p2", contraseña);
+
+
                         // Se agregan los parámetros para el nombre de usuario y la contraseña a la consulta SQL.
 
                         using (OleDbDataReader reader = comando.ExecuteReader())
@@ -142,12 +149,14 @@ namespace pryMoyaIE
                             {
                                 // Si se encuentra una fila en el resultado de la consulta, significa que el usuario se autenticó con éxito.
 
+                                //string prueba = reader[1].ToString();
+
                                 clsUsuario currentUser = new clsUsuario
                                 {
                                     Id = reader.GetInt32(0),
                                     Usuario = reader.GetString(1),
                                     Contraseña = reader.GetString(2),
-                                    Rol = reader.GetString(3)
+                                    //Rol = reader.GetString(3)
                                 };
                                 // Se crea un objeto clsLogs con los datos del usuario autenticado.
 
